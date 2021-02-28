@@ -13,6 +13,10 @@ body {
     width: 370px;
     margin-top: 50px;
   }
+
+  .darkmode--activated .image {
+    mix-blend-mode: difference;
+  }
   
   @media only screen and (max-width: 770px) {
     .container {

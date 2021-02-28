@@ -1,4 +1,5 @@
 import React from 'react';
+import Darkmode from 'darkmode-js';
 
 import { Cards, CountryPicker, Chart } from './components';
 import { fetchData } from './api/';
@@ -26,6 +27,16 @@ class App extends React.Component {
 
     
   render() {
+
+    const options = {
+        time: '1.5s',
+        label: '🌓',
+        autoMatchOsTheme: true
+    }
+
+    const darkmode = new Darkmode(options)
+    darkmode.showWidget()
+
     const { data, country } = this.state;
 
     return (
